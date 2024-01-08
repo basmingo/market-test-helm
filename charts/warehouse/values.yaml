@@ -1,0 +1,3 @@
+global:
+  port: 9092
+  replicas: 1

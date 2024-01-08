@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: {{ .Values.global.name }}
+    name: {{ .Chart.Name }}
 spec:
   replicas: {{ .Values.global.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.global.name }}
+      app: {{ .Chart.Name }}
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -15,10 +15,10 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Values.global.name }}
+        app: {{ .Chart.Name }}
     spec:
       containers:
-        - image: {{ .Values.image.full }}
-          name: {{ .Values.global.name }}
+        - image: basmingo/{{ .Chart.Name }}:latest
+          name: {{ .Chart.Name }}
           ports:
             - containerPort: {{ .Values.global.port }}

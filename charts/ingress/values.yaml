@@ -1,0 +1,6 @@
+global:
+  ports:
+    order: 9091
+    warehouse: 9092
+    user: 9093
+  host: pbasmanov.example.com

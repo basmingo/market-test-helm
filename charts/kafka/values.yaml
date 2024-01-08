@@ -1,0 +1,5 @@
+port:
+  kafka:
+    external: 29092
+    internal: 9092
+  zookeeper: 2181
