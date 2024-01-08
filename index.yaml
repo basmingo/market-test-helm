@@ -1,14 +1,30 @@
 apiVersion: v1
 entries:
-  user:
+  market:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-08T13:03:17.3909447+03:00"
+    created: "2024-01-08T16:26:28.8554868+03:00"
+    dependencies:
+    - name: order
+      repository: ""
+      version: 0.1.0
+    - name: warehouse
+      repository: ""
+      version: 0.1.0
+    - name: user
+      repository: ""
+      version: 0.1.0
+    - name: kafka
+      repository: ""
+      version: 0.1.0
+    - name: market-ingress
+      repository: ""
+      version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: c8b0105d92cfdbec00226d42c57be7dc1060c0dbf820127ed1ba9d5f38f77af3
-    name: user
+    digest: 61eb6680cce3582b72b27482416a1fca22007a84ae783b7a72d7d32592e50230
+    name: market
     type: application
     urls:
-    - https://basmingo.github.io/market-test-helm/user-0.1.0.tgz
+    - https://basmingo.github.io/market-test-helm/market-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-08T13:03:17.3904123+03:00"
+generated: "2024-01-08T16:26:28.8527153+03:00"
