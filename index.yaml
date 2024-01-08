@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2024-01-08T02:43:23.6383372+03:00"
+entries:
+  user:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-08T13:03:17.3909447+03:00"
+    description: A Helm chart for Kubernetes
+    digest: c8b0105d92cfdbec00226d42c57be7dc1060c0dbf820127ed1ba9d5f38f77af3
+    name: user
+    type: application
+    urls:
+    - https://basmingo.github.io/market-test-helm/user-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-08T13:03:17.3904123+03:00"
