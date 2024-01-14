@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Chart.Name }}
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: {{ .Values.global.host }}
+      http:
+        paths:
+          - pathType: ImplementationSpecific
+            path: /users(/|$)(.*)
+            backend:
+              service:
+                name: {{ .Values.global.service.name.user }}
+                port:
+                  number: {{ .Values.global.ports.user }}
+          - pathType: ImplementationSpecific
+            path: /products(/|$)(.*)
+            backend:
+              service:
+                name: {{ .Values.global.service.name.warehouse }}
+                port:
+                  number: {{ .Values.global.ports.warehouse }}
+          - pathType: ImplementationSpecific
+            path: /orders(/|$)(.*)
+            backend:
+              service:
+                name: {{ .Values.global.service.name.order }}
+                port:
+                  number: {{ .Values.global.ports.order }}
+          - pathType: ImplementationSpecific
+            path: /purchase(/|$)(.*)
+            backend:
+              service:
+                name: {{ .Values.global.service.name.orchestrator }}
+                port:
+                  number: {{ .Values.global.ports.orchestrator }}

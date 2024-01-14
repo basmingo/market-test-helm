@@ -1,5 +1,10 @@
+global:
+  replicas: 0
 port:
   kafka:
     external: 29092
     internal: 9092
   zookeeper: 2181
+zookeeper:
+  global:
+    replicas: 0

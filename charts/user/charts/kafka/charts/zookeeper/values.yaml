@@ -1,4 +1,2 @@
-global:
-  replicas: 1
 port:
   zookeeper: 2181

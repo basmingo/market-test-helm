@@ -22,3 +22,8 @@ spec:
           name: {{ .Chart.Name }}
           ports:
             - containerPort: {{ .Values.global.port }}
+          env:
+            - name: temporal.host
+              value: {{ .Values.temporal.host }}
+            - name: spring.kafka.bootstrap-servers
+              value: "{{ .Values.kafka.host }}:{{ .Values.kafka.port.internal }}"
