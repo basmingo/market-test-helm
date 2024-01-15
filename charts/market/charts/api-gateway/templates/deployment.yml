@@ -25,17 +25,17 @@ spec:
           env:
             - name: routers.orders.host
               value: {{ .Values.global.service.host.order }}
-            - name: routers.orders.port
+            - name: routers.orders.grpc-port
               value: {{ .Values.global.service.port.order }}
             - name: routers.warehouse.host
               value: {{ .Values.global.service.host.warehouse }}
-            - name: routers.warehouse.port
+            - name: routers.warehouse.grpc-port
               value: {{ .Values.global.service.port.warehouse }}
             - name: routers.users.host
               value: {{ .Values.global.service.host.user }}
-            - name: routers.users.port
+            - name: routers.users.grpc-port
               value: {{ .Values.global.service.port.user }}
             - name: routers.orchestrator.host
               value: {{ .Values.global.service.host.orchestrator }}
-            - name: routers.orchestrator.port
+            - name: routers.orchestrator.grpc-port
               value: {{ .Values.global.service.port.orchestrator }}
