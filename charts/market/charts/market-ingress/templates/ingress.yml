@@ -14,27 +14,34 @@ spec:
             path: /users(/|$)(.*)
             backend:
               service:
-                name: {{ .Values.global.service.name.user }}
+                name: user-service
                 port:
                   number: {{ .Values.global.ports.user }}
           - pathType: ImplementationSpecific
             path: /products(/|$)(.*)
             backend:
               service:
-                name: {{ .Values.global.service.name.warehouse }}
+                name: warehouse-service
                 port:
                   number: {{ .Values.global.ports.warehouse }}
           - pathType: ImplementationSpecific
             path: /orders(/|$)(.*)
             backend:
               service:
-                name: {{ .Values.global.service.name.order }}
+                name: order-service
                 port:
                   number: {{ .Values.global.ports.order }}
           - pathType: ImplementationSpecific
             path: /purchase(/|$)(.*)
             backend:
               service:
-                name: {{ .Values.global.service.name.orchestrator }}
+                name: orchestrator-service
                 port:
                   number: {{ .Values.global.ports.orchestrator }}
+          - pathType: ImplementationSpecific
+            path: /api(/|$)(.*)
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: {{ .Values.global.ports.api }}

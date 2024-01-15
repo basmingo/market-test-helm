@@ -4,10 +4,5 @@ global:
     warehouse: 9092
     user: 9093
     orchestrator: 9094
+    api: 8080
   host: pbasmanov.example.com
-  service:
-    name:
-      order: order-service
-      warehouse: warehouse-service
-      user: user-service
-      orchestrator: orchestrator-service

@@ -1,8 +1,0 @@
-global:
-  ports:
-    order: 9091
-    warehouse: 9092
-    user: 9093
-    orchestrator: 9094
-    api: 8080
-  host: pbasmanov.example.com
