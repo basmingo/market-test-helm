@@ -1,5 +1,31 @@
 apiVersion: v1
 entries:
+  api-gateway:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:02.802897835Z"
+    description: A Helm chart for Kubernetes
+    digest: d3ed4255a50b5b937f7599a42f51914ec2389dae0d7b539f4c72a02b408ac15e
+    name: api-gateway
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/api-gateway-0.1.0/api-gateway-0.1.0.tgz
+    version: 0.1.0
+  kafka:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.000765532Z"
+    dependencies:
+    - name: zookeeper
+      repository: ""
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: e192f234e4ddb949ad8c77ca11f1ec44d346a8c0d917b5733a4523433242102d
+    name: kafka
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/kafka-0.1.0/kafka-0.1.0.tgz
+    version: 0.1.0
   market:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -30,4 +56,59 @@ entries:
     urls:
     - https://basmingo.github.io/market-test-helm/market-0.1.2.tgz
     version: 0.1.2
-generated: "2024-01-15T14:38:30.6311569+03:00"
+  market-ingress:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.174805608Z"
+    description: A Helm chart for Kubernetes
+    digest: 0c511213b8ecea7bfa5d2587832970be384eaa174545a2b30b67b629b59ec860
+    name: market-ingress
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/market-ingress-0.1.0/market-ingress-0.1.0.tgz
+    version: 0.1.0
+  orchestrator:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.351297508Z"
+    description: A Helm chart for Kubernetes
+    digest: 80cea4a49e3c3cf4e9d70c6110f9fb2e7b947626451a43531c59161ff412a581
+    name: orchestrator
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/orchestrator-0.1.0/orchestrator-0.1.0.tgz
+    version: 0.1.0
+  order:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.585082794Z"
+    description: A Helm chart for Kubernetes
+    digest: ed35226db90ca3118428341246eb0bf39de12e1913ada19d7d091c49a3bb9119
+    name: order
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/order-0.1.0/order-0.1.0.tgz
+    version: 0.1.0
+  user:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.744676103Z"
+    description: A Helm chart for Kubernetes
+    digest: a6a766066ac169dd9462749a718660bd1b982f9edace099e7082890f24ace592
+    name: user
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/user-0.1.0/user-0.1.0.tgz
+    version: 0.1.0
+  warehouse:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-15T13:51:03.93196983Z"
+    description: A Helm chart for Kubernetes
+    digest: afe87cbd2461a3a95d756153d616eb8a9c0cb56b220611ccb64c6fc30b0c230a
+    name: warehouse
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/warehouse-0.1.0/warehouse-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-15T13:51:03.931976282Z"
