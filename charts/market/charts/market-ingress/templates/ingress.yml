@@ -42,6 +42,6 @@ spec:
             path: /api(/|$)(.*)
             backend:
               service:
-                name: api-gateway
+                name: api-gateway-service
                 port:
                   number: {{ .Values.global.ports.api }}
