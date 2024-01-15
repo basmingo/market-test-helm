@@ -32,6 +32,13 @@ spec:
                 port:
                   number: {{ .Values.global.ports.order }}
           - pathType: ImplementationSpecific
+            path: /purchase(/|$)(.*)
+            backend:
+              service:
+                name: orchestrator-service
+                port:
+                  number: {{ .Values.global.ports.orchestrator }}
+          - pathType: ImplementationSpecific
             path: /api(/|$)(.*)
             backend:
               service:
