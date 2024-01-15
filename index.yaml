@@ -3,7 +3,7 @@ entries:
   market:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-15T00:23:37.0697651+03:00"
+    created: "2024-01-15T14:38:30.6412515+03:00"
     dependencies:
     - name: order
       repository: ""
@@ -24,10 +24,10 @@ entries:
       repository: ""
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: f1649cc46886beafdb4f31bb9b6e6dac8ebec3899523fd22653b0edab3f8f7eb
+    digest: 770fc36b0efaf98ec7e9feec9d06ea6c3111da3f1f8093c8b4605d867833ddff
     name: market
     type: application
     urls:
-    - https://basmingo.github.io/market-test-helm/market-0.1.1.tgz
-    version: 0.1.1
-generated: "2024-01-15T00:23:37.0626032+03:00"
+    - https://basmingo.github.io/market-test-helm/market-0.1.2.tgz
+    version: 0.1.2
+generated: "2024-01-15T14:38:30.6311569+03:00"
