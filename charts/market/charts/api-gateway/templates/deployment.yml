@@ -22,3 +22,20 @@ spec:
           name: {{ .Chart.Name }}
           ports:
             - containerPort: {{ .Values.global.port }}
+          env:
+            - name: routers.orders.host
+              value: {{ .Values.global.service.host.order }}
+            - name: routers.orders.port
+              value: {{ .Values.global.service.port.order }}
+            - name: routers.warehouse.host
+              value: {{ .Values.global.service.host.warehouse }}
+            - name: routers.warehouse.port
+              value: {{ .Values.global.service.port.warehouse }}
+            - name: routers.users.host
+              value: {{ .Values.global.service.host.user }}
+            - name: routers.users.port
+              value: {{ .Values.global.service.port.user }}
+            - name: routers.orchestrator.host
+              value: {{ .Values.global.service.host.orchestrator }}
+            - name: routers.orchestrator.port
+              value: {{ .Values.global.service.port.orchestrator }}
