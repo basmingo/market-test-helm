@@ -31,3 +31,10 @@ spec:
                 name: order-service
                 port:
                   number: {{ .Values.global.ports.order }}
+          - pathType: ImplementationSpecific
+            path: /api(/|$)(.*)
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: {{ .Values.global.ports.api }}
