@@ -3,8 +3,8 @@ appVersion: 1.16.0
 dependencies:
 - name: zookeeper
   repository: ""
-  version: 0.1.0
+  version: 0.1.3
 description: A Helm chart for Kubernetes
 name: kafka
 type: application
-version: 0.1.0
+version: 0.1.3
