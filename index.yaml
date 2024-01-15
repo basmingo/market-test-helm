@@ -29,6 +29,38 @@ entries:
   market:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-01-15T15:57:52.615819921Z"
+    dependencies:
+    - name: order
+      repository: ""
+      version: 0.1.3
+    - name: warehouse
+      repository: ""
+      version: 0.1.3
+    - name: user
+      repository: ""
+      version: 0.1.3
+    - name: kafka
+      repository: ""
+      version: 0.1.3
+    - name: market-ingress
+      repository: ""
+      version: 0.1.5
+    - name: orchestrator
+      repository: ""
+      version: 0.1.3
+    - name: api-gateway
+      repository: ""
+      version: 0.1.4
+    description: A Helm chart for Kubernetes
+    digest: 4d487b840150037c8146172eaedf0a5b9b6f9f2b584b97ff2c7b0a1b9a3842b1
+    name: market
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/market-0.1.6/market-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-01-15T15:41:12.822536587Z"
     dependencies:
     - name: order
@@ -169,4 +201,4 @@ entries:
     urls:
     - https://github.com/basmingo/market-test-helm/releases/download/warehouse-0.1.3/warehouse-0.1.3.tgz
     version: 0.1.3
-generated: "2024-01-15T15:41:12.822550824Z"
+generated: "2024-01-15T15:57:52.61583536Z"
