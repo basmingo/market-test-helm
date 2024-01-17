@@ -1,5 +1,0 @@
-global:
-  port: 9094
-  replicas: 1
-temporal:
-  host: temporaltest-frontend

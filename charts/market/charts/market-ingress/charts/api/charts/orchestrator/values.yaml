@@ -1,0 +1,5 @@
+port: 9094
+replicas: 1
+temporal:
+  enabled: false
+  host: temporaltest-frontend

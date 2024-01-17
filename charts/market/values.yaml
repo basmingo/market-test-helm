@@ -1,2 +1,57 @@
-port:
-  zookeeper: 2181
+market-ingress:
+  host: pbasmanov.example.com
+  api:
+    port: 8080
+    replicas: 1
+    kafka:
+      replicas: 1
+      port:
+        external: 29092
+        internal: 9092
+      zookeeper:
+        port: 2181
+        replicas: 1
+
+    order:
+      host: order-service
+      port: 9091
+      replicas: 1
+      temporal:
+        enabled: false
+        host: temporaltest-frontend
+      kafka:
+        host: kafka
+        port:
+          internal: 9092
+
+    warehouse:
+      host: warehouse-service
+      port: 9092
+      replicas: 1
+      temporal:
+        enabled: false
+        host: temporaltest-frontend
+      kafka:
+        host: kafka
+        port:
+          internal: 9092
+
+    user:
+      host: user-service
+      port: 9093
+      replicas: 1
+      temporal:
+        enabled: false
+        host: temporaltest-frontend
+      kafka:
+        host: kafka
+        port:
+          internal: 9092
+
+    orchestrator:
+      host: orchestrator-service
+      port: 9094
+      replicas: 1
+      temporal:
+        enabled: false
+        host: temporaltest-frontend

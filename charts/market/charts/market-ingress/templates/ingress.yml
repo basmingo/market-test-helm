@@ -7,41 +7,41 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
-    - host: {{ .Values.global.host }}
+    - host: {{ .Values.host }}
       http:
         paths:
           - pathType: ImplementationSpecific
             path: /users(/|$)(.*)
             backend:
               service:
-                name: user-service
+                name: {{ .Values.api.user.host }}
                 port:
-                  number: {{ .Values.global.ports.user }}
+                  number: {{ .Values.api.user.port }}
           - pathType: ImplementationSpecific
             path: /products(/|$)(.*)
             backend:
               service:
-                name: warehouse-service
+                name: {{ .Values.api.warehouse.host }}
                 port:
-                  number: {{ .Values.global.ports.warehouse }}
+                  number: {{ .Values.api.warehouse.port }}
           - pathType: ImplementationSpecific
             path: /orders(/|$)(.*)
             backend:
               service:
-                name: order-service
+                name: {{ .Values.api.order.host }}
                 port:
-                  number: {{ .Values.global.ports.order }}
+                  number: {{ .Values.api.order.port }}
           - pathType: ImplementationSpecific
             path: /purchase(/|$)(.*)
             backend:
               service:
-                name: orchestrator-service
+                name: {{ .Values.api.orchestrator.host }}
                 port:
-                  number: {{ .Values.global.ports.orchestrator }}
+                  number: {{ .Values.api.orchestrator.port }}
           - pathType: ImplementationSpecific
             path: /api(/|$)(.*)
             backend:
               service:
-                name: api-gateway-service
+                name: {{ .Chart.Name }}-service
                 port:
-                  number: {{ .Values.global.ports.api }}
+                  number: {{ .Values.api.port }}

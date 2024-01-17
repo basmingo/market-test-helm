@@ -1,9 +1,0 @@
-global:
-  port: 9092
-  replicas: 1
-temporal:
-  host: temporaltest-frontend
-kafka:
-  host: kafka
-  port:
-    internal: 9092

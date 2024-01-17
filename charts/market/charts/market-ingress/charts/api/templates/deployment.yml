@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: {{ .Chart.Name }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+      containers:
+        - image: basmingo/{{ .Chart.Name }}-gateway:latest
+          name: {{ .Chart.Name }}
+          ports:
+            - containerPort: {{ .Values.port }}
+          env:
+            - name: routers.orders.host
+              value: {{ .Values.order.host }}
+            - name: routers.orders.grpc-port
+              value: "{{ .Values.order.port }}"
+            - name: routers.warehouse.host
+              value: {{ .Values.warehouse.host }}
+            - name: routers.warehouse.grpc-port
+              value: "{{ .Values.warehouse.port }}"
+            - name: routers.users.host
+              value: {{ .Values.user.host }}
+            - name: routers.users.grpc-port
+              value: "{{ .Values.user.port }}"
+            - name: routers.orchestrator.host
+              value: {{ .Values.orchestrator.host }}
+            - name: routers.orchestrator.grpc-port
+              value: "{{ .Values.orchestrator.port }}"

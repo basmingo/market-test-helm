@@ -1,0 +1,10 @@
+port: 9091
+replicas: 1
+temporal:
+  enabled: false
+  host: temporaltest-frontend
+kafka:
+  host: kafka
+  port:
+    internal: 9092
+

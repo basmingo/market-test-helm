@@ -1,0 +1,7 @@
+replicas: 1
+port:
+  external: 29092
+  internal: 9092
+zookeeper:
+  port: 2181
+  replicas: 1
