@@ -29,6 +29,20 @@ entries:
   market:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-01-17T18:17:41.809804165Z"
+    dependencies:
+    - name: market-ingress
+      repository: ""
+      version: 0.1.6
+    description: A Helm chart for Kubernetes
+    digest: b68c7e5646faad9c768877eba7cd199d45eebab94f366b61d583be6804ec3e66
+    name: market
+    type: application
+    urls:
+    - https://github.com/basmingo/market-test-helm/releases/download/market-0.1.8/market-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-01-15T16:10:06.362408529Z"
     dependencies:
     - name: order
@@ -233,4 +247,4 @@ entries:
     urls:
     - https://github.com/basmingo/market-test-helm/releases/download/warehouse-0.1.3/warehouse-0.1.3.tgz
     version: 0.1.3
-generated: "2024-01-15T16:10:06.362430279Z"
+generated: "2024-01-17T18:17:41.809829152Z"
