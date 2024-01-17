@@ -42,6 +42,6 @@ spec:
             path: /api(/|$)(.*)
             backend:
               service:
-                name: {{ .Chart.Name }}-service
+                name: {{ .Values.api.host }}
                 port:
                   number: {{ .Values.api.port }}

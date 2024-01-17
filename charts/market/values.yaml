@@ -1,6 +1,7 @@
 market-ingress:
   host: pbasmanov.example.com
   api:
+    host: api-service
     port: 8080
     replicas: 1
     kafka:
